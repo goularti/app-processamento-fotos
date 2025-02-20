@@ -66,7 +66,7 @@ Um aplicativo web simples e eficiente para processamento em lote de imagens, ofe
 
 ## 🏗️ Estrutura do Projeto
 ```
-processador-imagens/
+app-processamento-fotos /
 │
 ├── 📄 index.html # Página principal
 ├── 🎨 style.css # Estilos CSS
