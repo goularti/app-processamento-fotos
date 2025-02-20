@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Processador de Imagens</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Processador de Imagens</h1>
+
+    <div class="upload-section">
+      <input type="file" id="imageInput" accept=".jpg,.jpeg,.png" multiple>
+      <p class="info">Máximo 25 imagens (JPG, JPEG, PNG)</p>
+    </div>
+
+    <div class="date-section">
+      <label for="dateInput">Data para inserir nas imagens:</label>
+      <input type="text" id="dateInput" placeholder="DD/MM/AAAA">
+    </div>
+
+    <div class="image-preview" id="imagePreview">
+      <!-- Previews serão inseridas aqui -->
+    </div>
+
+    <div class="controls">
+      <button id="processButton">Processar Imagens</button>
+      <button id="downloadButton" disabled>Baixar Imagens</button>
+    </div>
+
+    <!-- Modal para cropping -->
+    <div id="cropModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="crop-container">
+          <img id="cropImage" src="">
+        </div>
+        <button id="cropButton">Cortar Imagem</button>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
