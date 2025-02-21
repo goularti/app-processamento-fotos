@@ -8,7 +8,6 @@
 }
 
 body {
-	background-color: var(--background-color);
 	font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
 	color: #333;
 	line-height: 1.6;
@@ -114,7 +113,7 @@ input[type="file"] {
 .progress-fill {
 	height: 100%;
 	background: var(--primary-color);
-	width: 0%;
+	width: 0;
 	transition: width 0.3s ease;
 }
 
