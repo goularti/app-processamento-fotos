@@ -351,10 +351,10 @@ async function downloadImages() {
 
     processedImages.forEach((image, index) => {
         const base64Data = image.data.replace(/^data:image\/\w+;base64,/, "");
-        zip.file(`processed_${image.name}`, base64Data, { base64: true });
+        zip.file(`processed_${image.name}`, base64Data, {base64: true});
     });
 
-    const content = await zip.generateAsync({ type: "blob" });
+    const content = await zip.generateAsync({type: "blob"});
     const link = document.createElement('a');
     link.href = URL.createObjectURL(content);
     link.download = 'processed_images.zip';
