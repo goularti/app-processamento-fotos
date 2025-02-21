@@ -3,7 +3,7 @@
 [![Licença MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow.svg)](https://www.javascript.com/)
 
-Um aplicativo web simples e eficiente para processamento em lote de imagens, oferecendo recursos de recorte e marcação de data.
+Um aplicativo web simples e eficiente para processamento em lote de imagens, oferecendo recursos de recorte e marcação de texto ou data.
 
 ## ✨ Funcionalidades
 
