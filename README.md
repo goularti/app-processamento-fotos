@@ -56,7 +56,7 @@ Um aplicativo web simples e eficiente para processamento em lote de imagens, ofe
    - Confirme as alterações
 
 3. **Processamento**
-   - Digite a data no formato DD/MM/AAAA
+   - Digite a legenda "texto" ou uma data no formato dd/mm/aaaa
    - Clique em "Processar Imagens"
    - Aguarde o processamento
 
