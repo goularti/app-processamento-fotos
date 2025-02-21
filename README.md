@@ -109,7 +109,7 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 ## 📬 Contato
 
-Link do Projeto: [https://github.com/seu-usuario/app-processamento-fotos](https://github.com/goularti/app-processamento-fotos)
+Link do Projeto: [https://github.com/goularti/app-processamento-fotos](https://github.com/goularti/app-processamento-fotos)
 
 ---
 
