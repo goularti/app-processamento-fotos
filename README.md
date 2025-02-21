@@ -65,13 +65,21 @@ Um aplicativo web simples e eficiente para processamento em lote de imagens, ofe
    - Receba o arquivo ZIP com todas as imagens processadas
 
 ## 🏗️ Estrutura do Projeto
+
 ```
 app-processamento-fotos /
 │
-├── 📄 index.html # Página principal
-├── 🎨 style.css # Estilos CSS
-├── 🔧 script.js # Lógica JavaScript
-└── 📝 README.md # Documentação
+├── 📁 css/
+│   ├── 🎨 style.css        # Estilos principais
+│   └── 🎨 cropperjs.css    # Estilos do Cropper.js
+│
+├── 📁 js/
+│   ├── 🔧 script.js        # Lógica principal
+│   ├── 📦 jszip.js         # Biblioteca de compactação
+│   └── ✂️ cropperjs.js     # Biblioteca de recorte
+│
+├── 📄 index.html           # Página principal
+└── 📝 README.md           # Documentação
 ```
 
 
