@@ -67,7 +67,7 @@ Um aplicativo web simples e eficiente para processamento em lote de imagens, ofe
 ## 🏗️ Estrutura do Projeto
 
 ```
-app-processamento-fotos /
+processador-imagens/
 │
 ├── 📁 css/
 │   ├── 🎨 style.css        # Estilos principais
@@ -77,6 +77,10 @@ app-processamento-fotos /
 │   ├── 🔧 script.js        # Lógica principal
 │   ├── 📦 jszip.js         # Biblioteca de compactação
 │   └── ✂️ cropperjs.js     # Biblioteca de recorte
+│
+├── 📁 img/
+│   ├── 🖼️ upload.png       # Ícone de upload
+│   └── ℹ️ info.png         # Ícone de informação
 │
 ├── 📄 index.html           # Página principal
 └── 📝 README.md           # Documentação
