@@ -266,11 +266,6 @@ document.getElementById('cropButton').onclick = function () {
 
 async function processImages() {
     const date = document.getElementById('dateInput').value;
-    if (!date) {
-        alert('Por favor, insira uma data.');
-        return;
-    }
-
     const processButton = document.getElementById('processButton');
     const buttonContent = processButton.querySelector('.button-content');
     const buttonLoader = processButton.querySelector('.button-loader');
@@ -294,29 +289,32 @@ async function processImages() {
             // Desenhar a imagem
             ctx.drawImage(img, 0, 0);
 
-            // Configurar o estilo do texto
-            ctx.font = '20px Arial';
+            // Só adicionar a legenda se ela existir
+            if (date.trim()) {
+                // Configurar o estilo do texto
+                ctx.font = '20px Arial';
 
-            // Calcular a largura do texto
-            const textWidth = ctx.measureText(date).width;
-            const padding = 5;
+                // Calcular a largura do texto
+                const textWidth = ctx.measureText(date).width;
+                const padding = 5;
 
-            // Posicionar o texto
-            const xPosition = canvas.width - textWidth - 10;
-            const yPosition = 25;
+                // Posicionar o texto
+                const xPosition = canvas.width - textWidth - 10;
+                const yPosition = 25;
 
-            // Desenhar o fundo branco
-            ctx.fillStyle = 'white';
-            ctx.fillRect(
-                xPosition - padding,
-                yPosition - 20,
-                textWidth + (padding * 2),
-                30
-            );
+                // Desenhar o fundo branco
+                ctx.fillStyle = 'white';
+                ctx.fillRect(
+                    xPosition - padding,
+                    yPosition - 20,
+                    textWidth + (padding * 2),
+                    30
+                );
 
-            // Desenhar o texto
-            ctx.fillStyle = 'black';
-            ctx.fillText(date, xPosition, yPosition);
+                // Desenhar o texto
+                ctx.fillStyle = 'black';
+                ctx.fillText(date, xPosition, yPosition);
+            }
 
             processedImages.push({
                 name: file.name,
@@ -351,10 +349,10 @@ async function downloadImages() {
 
     processedImages.forEach((image, index) => {
         const base64Data = image.data.replace(/^data:image\/\w+;base64,/, "");
-        zip.file(`processed_${image.name}`, base64Data, {base64: true});
+        zip.file(`processed_${image.name}`, base64Data, { base64: true });
     });
 
-    const content = await zip.generateAsync({type: "blob"});
+    const content = await zip.generateAsync({ type: "blob" });
     const link = document.createElement('a');
     link.href = URL.createObjectURL(content);
     link.download = 'processed_images.zip';
@@ -366,9 +364,7 @@ function updateProcessButton() {
     if (!processButton || !dateInput) return;
 
     const hasImages = selectedFiles.length > 0;
-    const hasDate = dateInput.value.trim() !== '';
-
-    processButton.disabled = !(hasImages && hasDate);
+    processButton.disabled = !hasImages;
 }
 
 if (dateInput) {
