@@ -79,8 +79,9 @@ processador-imagens/
 │   └── ✂️ cropperjs.js     # Biblioteca de recorte
 │
 ├── 📁 img/
-│   ├── 🖼️ upload-icon.png       # Ícone de upload
-│   └── ℹ️ info-icon.png         # Ícone de informação
+│   ├── 🖼️ upload-icon.png  # Ícone de upload
+│   ├── ℹ️ info-icon.png    # Ícone de informação
+│   └── 📌 favicon.ico      # Ícone da página
 │
 ├── 📄 index.html           # Página principal
 └── 📝 README.md           # Documentação

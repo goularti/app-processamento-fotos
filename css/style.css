@@ -332,6 +332,16 @@ button:disabled {
     }
 }
 
+@media (max-width: 435px) {
+    .image-preview {
+        justify-items: center;
+    }
+
+    #dateInput {
+        width: 76%;
+    }
+}
+
 .selection-controls {
     display: flex;
     justify-content: space-between;
